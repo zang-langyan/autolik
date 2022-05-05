@@ -5,3 +5,4 @@ dist/
 pyproject.toml
 autolik.egg-info/
 .vscode/
+tests/
