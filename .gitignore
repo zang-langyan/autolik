@@ -1,0 +1,7 @@
+.idea/
+.DS_Store
+data/
+dist/
+pyproject.toml
+autolik.egg-info/
+.vscode/
