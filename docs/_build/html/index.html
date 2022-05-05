@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to autolik’s documentation! &mdash; autolik 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> autolik
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to autolik’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#autodiff">autodiff</a></li>
+<li><a class="reference internal" href="#distributions-and-likelihood">distributions and likelihood</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">autolik</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Welcome to autolik’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-autolik">
+<span id="welcome-to-autolik-s-documentation"></span><h1>Welcome to autolik’s documentation!<a class="headerlink" href="#module-autolik" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+<section id="autodiff">
+<h1>autodiff<a class="headerlink" href="#autodiff" title="Permalink to this headline"></a></h1>
+<p>Common user interface for the gradient computation and gradient function construction</p>
+<span class="target" id="module-autolik.autodiff"></span><dl class="py function">
+<dt class="sig sig-object py" id="autolik.autodiff.F">
+<span class="sig-prename descclassname"><span class="pre">autolik.autodiff.</span></span><span class="sig-name descname"><span class="pre">F</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.autodiff.F" title="Permalink to this definition"></a></dt>
+<dd><p>Construct a function for Dual-type function computation</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autolik.autodiff.grad">
+<span class="sig-prename descclassname"><span class="pre">autolik.autodiff.</span></span><span class="sig-name descname"><span class="pre">grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.autodiff.grad" title="Permalink to this definition"></a></dt>
+<dd><p>Construct a gradient function</p>
+<p>construct a gradient function with respect to x</p>
+<p>Example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">autolik</span> <span class="kn">import</span> <span class="n">grad</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">exp</span><span class="p">()</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">exp</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">grad</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">at</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Grad</span> <span class="o">=</span> <span class="p">[</span><span class="n">grad</span><span class="p">(</span><span class="n">f</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">at</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autolik.autodiff.gradient">
+<span class="sig-prename descclassname"><span class="pre">autolik.autodiff.</span></span><span class="sig-name descname"><span class="pre">gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">at</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.autodiff.gradient" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the gradient of a provided function at specific points</p>
+<p>Common interface for gradient computation</p>
+<p>Example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">autolik</span> <span class="kn">import</span> <span class="n">grad</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span> <span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">exp</span><span class="p">()</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">exp</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">at</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Grad</span> <span class="o">=</span> <span class="n">gradient</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">at</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+<section id="distributions-and-likelihood">
+<h1>distributions and likelihood<a class="headerlink" href="#distributions-and-likelihood" title="Permalink to this headline"></a></h1>
+<p>Built in distibutions and their likelihood functions API</p>
+<p>For probability density function usage, use <code class="docutils literal notranslate"><span class="pre">autolik.pdf</span></code> attribute;
+For log-likelihood function usage, use <code class="docutils literal notranslate"><span class="pre">autolik.ll</span></code> attribute;</p>
+<span class="target" id="module-autolik.distributions.univariate"></span><dl class="py class">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autolik.distributions.univariate.</span></span><span class="sig-name descname"><span class="pre">pdf</span></span><a class="headerlink" href="#autolik.distributions.univariate.pdf" title="Permalink to this definition"></a></dt>
+<dd><p>Univariate distributions probability density functions library</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.Ggamma">
+<span class="sig-name descname"><span class="pre">Ggamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gam</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.Ggamma" title="Permalink to this definition"></a></dt>
+<dd><p>Generalized Gamma distribution <span class="math notranslate nohighlight">\(X \sim \text{generalized gamma}(\alpha,\beta,\gamma)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{\gamma x^{\gamma \beta-1} e^{-(x/ \alpha)^{\gamma}}}{\alpha^{\gamma \beta} \Gamma{\beta}} , x &gt; 0\]</div>
+<p>with positive scale parameter <span class="math notranslate nohighlight">\(\alpha &gt; 0\)</span> and positive shape parameter <span class="math notranslate nohighlight">\(\beta &gt; 0\)</span> and <span class="math notranslate nohighlight">\(\gamma &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.Gpareto">
+<span class="sig-name descname"><span class="pre">Gpareto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gam</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.Gpareto" title="Permalink to this definition"></a></dt>
+<dd><p>Generalized Pareto distribution <span class="math notranslate nohighlight">\(X \sim \text{generalized pareto}(\delta,\kappa,\gamma)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = (\gamma + \dfrac{\kappa}{x+\delta})(1+\dfrac{x}{\delta})^{-\kappa} e^{-\gamma x} , x &gt; 0\]</div>
+<p>with shape parameters <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>, <span class="math notranslate nohighlight">\(\kappa \ge -\delta \gamma\)</span> and <span class="math notranslate nohighlight">\(\gamma \ge 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.Tdist">
+<span class="sig-name descname"><span class="pre">Tdist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.Tdist" title="Permalink to this definition"></a></dt>
+<dd><p>Student t distribution <span class="math notranslate nohighlight">\(X \sim t(n)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{\Gamma(\frac{n+1}{2}) (1+\frac{x^2}{n})^{-\frac{n+1}{2}}}{\sqrt{n\pi} \Gamma{\frac{n}{2}}}, -\infty &lt; x &lt; \infty\]</div>
+<p>with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.beta">
+<span class="sig-name descname"><span class="pre">beta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gam</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.beta" title="Permalink to this definition"></a></dt>
+<dd><p>Beta distribution <span class="math notranslate nohighlight">\(X \sim beta(\beta,\gamma)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{\Gamma(\beta+\gamma)x^{\beta-1}(1-x)^{\gamma-1}}{\Gamma{\beta}\Gamma{\gamma}} , 0&lt;x&lt;1\]</div>
+<p>with positive shape parameters <span class="math notranslate nohighlight">\(\beta &gt; 0\)</span>, <span class="math notranslate nohighlight">\(\gamma &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.cauchy">
+<span class="sig-name descname"><span class="pre">cauchy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.cauchy" title="Permalink to this definition"></a></dt>
+<dd><p>Cauchy distribution <span class="math notranslate nohighlight">\(X \sim Cauchy(a,\alpha)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{1}{\alpha \pi (1+((x-a)/\alpha)^2)} , -\infty&lt;x&lt;\infty\]</div>
+<p>with location parameter <span class="math notranslate nohighlight">\(a \in (-\infty,\infty)\)</span>, and positive scale parameter <span class="math notranslate nohighlight">\(\alpha &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.chi">
+<span class="sig-name descname"><span class="pre">chi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.chi" title="Permalink to this definition"></a></dt>
+<dd><p>Chi distribution <span class="math notranslate nohighlight">\(X \sim \chi(n)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{1}{2^{\frac{n}{2}-1} \Gamma(\frac{n}{2})}x^{n-1}e^{-\frac{x^2}{2}} , x &gt; 0\]</div>
+<p>with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.chisqr">
+<span class="sig-name descname"><span class="pre">chisqr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.chisqr" title="Permalink to this definition"></a></dt>
+<dd><p>Chi-square distribution <span class="math notranslate nohighlight">\(X \sim \chi^2(n)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{x^{\frac{n}{2}}e^{-\frac{x}{2}}}{2^{\frac{n}{2}} \Gamma(\frac{n}{2})} , x &gt; 0\]</div>
+<p>with <span class="math notranslate nohighlight">\(n\)</span> degrees of freedom</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.exponential">
+<span class="sig-name descname"><span class="pre">exponential</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lam</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.exponential" title="Permalink to this definition"></a></dt>
+<dd><p>Exponential distribution <span class="math notranslate nohighlight">\(X \sim exponential(\alpha)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \lambda e^{-\lambda x} , x &gt; 0\]</div>
+<p>with rate <span class="math notranslate nohighlight">\(\lambda\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.gamma">
+<span class="sig-name descname"><span class="pre">gamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.gamma" title="Permalink to this definition"></a></dt>
+<dd><p>Gamma distribution <span class="math notranslate nohighlight">\(X \sim gamma(\alpha,\beta)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{x^{\beta-1} e^{-\frac{x}{\alpha}}}{\alpha^{\beta} \Gamma{\beta}} , x &gt; 0\]</div>
+<p>with positive scale parameter <span class="math notranslate nohighlight">\(\alpha &gt; 0\)</span> and positive shape parameter <span class="math notranslate nohighlight">\(\beta &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.invgamma">
+<span class="sig-name descname"><span class="pre">invgamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.invgamma" title="Permalink to this definition"></a></dt>
+<dd><p>Inverted Gamma distribution <span class="math notranslate nohighlight">\(X \sim \text{inverted gamma}(\alpha,\beta)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{x^{-(\alpha+1) e^{-\frac{1}{\beta x}}}}{\Gamma(\alpha)\beta^{\alpha}} , x &gt; 0\]</div>
+<p>with positive shape parameter <span class="math notranslate nohighlight">\(\alpha &gt; 0\)</span> and positive scale parameter <span class="math notranslate nohighlight">\(\beta &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.invgaussian">
+<span class="sig-name descname"><span class="pre">invgaussian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lam</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.invgaussian" title="Permalink to this definition"></a></dt>
+<dd><p>Inverse Gaussian distribution <span class="math notranslate nohighlight">\(X \sim \text{inverse Gaussian}(\lambda, \mu)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \sqrt{\dfrac{\lambda}{2\pi x^3}} e^{-\dfrac{\lambda(x-\mu)^2}{2x\mu^2}} , x &gt; 0\]</div>
+<p>with parameters <span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span> and <span class="math notranslate nohighlight">\(\mu &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.laplace">
+<span class="sig-name descname"><span class="pre">laplace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.laplace" title="Permalink to this definition"></a></dt>
+<dd><p>Laplace distribution <span class="math notranslate nohighlight">\(X \sim Laplace(\alpha_1,\alpha_2)\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x) = \begin{cases} (1/(\alpha_1 + \alpha_2))e^{\frac{x}{\alpha_1}}, x &lt; 0 \\ (1/(\alpha_1 + \alpha_2))e^{-\frac{x}{\alpha_2}}, x \ge 0 \end{cases}\end{split}\]</div>
+<p>with positive scale parameters <span class="math notranslate nohighlight">\(\alpha_1 &gt; 0\)</span> and <span class="math notranslate nohighlight">\(\alpha_2 &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.loggamma">
+<span class="sig-name descname"><span class="pre">loggamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.loggamma" title="Permalink to this definition"></a></dt>
+<dd><p>Log-Gamma distribution <span class="math notranslate nohighlight">\(X \sim log-gamma(\alpha,\beta)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{e^{\beta x} e^{-\frac{e^x}{\alpha}}}{\alpha^{\beta} \Gamma(\beta)}, -\infty &lt; x &lt; \infty\]</div>
+<p>with positive scale parameter <span class="math notranslate nohighlight">\(\alpha &gt; 0\)</span> and positive shape parameter <span class="math notranslate nohighlight">\(\beta &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.logistic">
+<span class="sig-name descname"><span class="pre">logistic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lam</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.logistic" title="Permalink to this definition"></a></dt>
+<dd><p>Logistic distribution <span class="math notranslate nohighlight">\(X \sim logistic(\lambda,\kappa)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{\lambda^{\kappa}\kappa e^{\kappa x}}{(1+(\lambda e^x)^{\kappa})^2}, -\infty &lt; x &lt; \infty\]</div>
+<p>with positive scale parameter <span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span> and positive shape parameter <span class="math notranslate nohighlight">\(\kappa &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.logistic_exp">
+<span class="sig-name descname"><span class="pre">logistic_exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.logistic_exp" title="Permalink to this definition"></a></dt>
+<dd><p>Logistic-Exponential distribution <span class="math notranslate nohighlight">\(X \sim log-exponential(\alpha,\beta)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{\alpha \beta (e^{\alpha x} - 1)^{\beta-1} e^{\alpha x}}{(1+(e^{\alpha x} - 1)^{\beta})^2}, x &gt; 0\]</div>
+<p>with positive scale parameter <span class="math notranslate nohighlight">\(\alpha &gt; 0\)</span> and positive shape parameter <span class="math notranslate nohighlight">\(\bata &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.loglogistic">
+<span class="sig-name descname"><span class="pre">loglogistic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lam</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.loglogistic" title="Permalink to this definition"></a></dt>
+<dd><p>Log-Logistic distribution <span class="math notranslate nohighlight">\(X \sim loglogistic(\lambda,\kappa)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{\lambda \kappa (\lambda x)^{\kappa-1}}{(1+(\lambda x)^{\kappa})^2}, x &gt; 0\]</div>
+<p>with positive scale parameter <span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span> and positive shape parameter <span class="math notranslate nohighlight">\(\kappa &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.lognormal">
+<span class="sig-name descname"><span class="pre">lognormal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.lognormal" title="Permalink to this definition"></a></dt>
+<dd><p>Log-normal distribution <span class="math notranslate nohighlight">\(X \sim log-normal(\alpha,\beta)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{1}{x\beta \sqrt{2\pi}} e^{-\frac{1}{2}(ln(x/ \alpha)/ \beta)^2}, x &gt; 0\]</div>
+<p>with positive parameters <span class="math notranslate nohighlight">\(\alpha &gt; 0\)</span>, <span class="math notranslate nohighlight">\(\beta &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.lomax">
+<span class="sig-name descname"><span class="pre">lomax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lam</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.lomax" title="Permalink to this definition"></a></dt>
+<dd><p>Lomax distribution <span class="math notranslate nohighlight">\(X \sim lomax(\lambda,\kappa)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{\lambda \kappa}{(1+\lambda x)^{\kappa + 1}}, x &gt; 0\]</div>
+<p>with positive scale parameter <span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span> and positive shape parameter <span class="math notranslate nohighlight">\(\kappa &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.makeham">
+<span class="sig-name descname"><span class="pre">makeham</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gam</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.makeham" title="Permalink to this definition"></a></dt>
+<dd><p>Makeham distribution <span class="math notranslate nohighlight">\(X \sim Makeham(\delta,\kappa,\gamma)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = (\gamma + \delta \kappa^x) e^{-\gamma x -\delta(\kappa^x -1)/ln(\kappa)}, x &gt; 0\]</div>
+<p>with positive parameters <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> <span class="math notranslate nohighlight">\(\kappa &gt; 0\)</span> <span class="math notranslate nohighlight">\(\gamma &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.minimax">
+<span class="sig-name descname"><span class="pre">minimax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gam</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.minimax" title="Permalink to this definition"></a></dt>
+<dd><p>Minimax distribution <span class="math notranslate nohighlight">\(X \sim minimax(\beta,\gamma)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \beta \gamma x^{\beta-1} (1-x^{\beta})^{\gamma-1} , 0 &lt; x &lt; 1\]</div>
+<p>with positive shape parameters <span class="math notranslate nohighlight">\(\beta &gt; 0\)</span> and <span class="math notranslate nohighlight">\(\gamma &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.muth">
+<span class="sig-name descname"><span class="pre">muth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.muth" title="Permalink to this definition"></a></dt>
+<dd><p>Muth distribution <span class="math notranslate nohighlight">\(X \sim muth(\kappa)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = (e^{\kappa x} - \kappa) e^{-\frac{e^{\kappa x}}{\kappa} + \kappa x + \frac{1}{\kappa}}, x &gt; 0\]</div>
+<p>with parameter <span class="math notranslate nohighlight">\(0 &lt; \kappa \le 1\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.normal">
+<span class="sig-name descname"><span class="pre">normal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.normal" title="Permalink to this definition"></a></dt>
+<dd><p>Gaussian distribution <span class="math notranslate nohighlight">\(X \sim N(\mu,\sigma^2)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{1}{\sqrt{2\pi} \sigma} e^{-\frac{(x-\mu)^2}{2\sigma^2}}, -\infty &lt; x &lt; \infty\]</div>
+<p>with mean <span class="math notranslate nohighlight">\(-\infty &lt; \mu &lt; \infty\)</span> and variance <span class="math notranslate nohighlight">\(\sigma^2\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.pareto">
+<span class="sig-name descname"><span class="pre">pareto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lam</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.pareto" title="Permalink to this definition"></a></dt>
+<dd><p>Pareto distribution <span class="math notranslate nohighlight">\(X \sim pareto(\lambda,\kappa)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{\kappa \lambda^{\kappa}}{x^{\kappa+1}}, x &gt; \lambda\]</div>
+<p>with positive parameters <span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span> and <span class="math notranslate nohighlight">\(\kappa &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.power">
+<span class="sig-name descname"><span class="pre">power</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.power" title="Permalink to this definition"></a></dt>
+<dd><p>Power distribution <span class="math notranslate nohighlight">\(X \sim power(\alpha,\beta)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{\beta x^{\beta-1}}{\alpha^{\beta}}, 0 &lt; x &lt; \alpha\]</div>
+<p>with positive scale parameter <span class="math notranslate nohighlight">\(\alpha &gt; 0\)</span> and positive shape parameter <span class="math notranslate nohighlight">\(\beta &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.rayleigh">
+<span class="sig-name descname"><span class="pre">rayleigh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.rayleigh" title="Permalink to this definition"></a></dt>
+<dd><p>Rayleigh distribution <span class="math notranslate nohighlight">\(X \sim Rayleigh(\alpha)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{2x e^{-\frac{x^2}{\alpha}}}{\alpha}, x &gt; 0\]</div>
+<p>with positive parameter <span class="math notranslate nohighlight">\(\alpha &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.std_power">
+<span class="sig-name descname"><span class="pre">std_power</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.std_power" title="Permalink to this definition"></a></dt>
+<dd><p>Standard Power distribution <span class="math notranslate nohighlight">\(X \sim power(1,\beta)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \beta x^{\beta-1}, 0 &lt; x &lt; 1\]</div>
+<p>with positive shape parameter <span class="math notranslate nohighlight">\(\beta &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.std_wald">
+<span class="sig-name descname"><span class="pre">std_wald</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lam</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.std_wald" title="Permalink to this definition"></a></dt>
+<dd><p>Standard Wald distribution <span class="math notranslate nohighlight">\(X \sim standard-Wald(\lambda)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \sqrt{\dfrac{\lambda}{2\pi x^3}} e^{-\frac{\lambda(x-1)^2}{2x}}, x &gt; 0\]</div>
+<p>with parameter <span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.uniform">
+<span class="sig-name descname"><span class="pre">uniform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.uniform" title="Permalink to this definition"></a></dt>
+<dd><p>Uniform distribution <span class="math notranslate nohighlight">\(X \sim U(a,b)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{1}{b-a}, a &lt; x &lt; b\]</div>
+<p>with range parameters <span class="math notranslate nohighlight">\(-\infty &lt; a &lt; b &lt; \infty\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autolik.distributions.univariate.pdf.weibull">
+<span class="sig-name descname"><span class="pre">weibull</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autolik.distributions.univariate.pdf.weibull" title="Permalink to this definition"></a></dt>
+<dd><p>Weibull distribution <span class="math notranslate nohighlight">\(X \sim Weibull(\alpha,\beta)\)</span></p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{\beta}{\alpha} x^{\beta-1} e^{-\frac{x^{\beta}}{\alpha}}, x &gt; 0\]</div>
+<p>with positive scale parameter <span class="math notranslate nohighlight">\(\alpha &gt; 0\)</span> and positive shape parameter <span class="math notranslate nohighlight">\(\beta &gt; 0\)</span></p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h1>
+<p>Example (self-defined function):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">autolik</span> <span class="kn">import</span> <span class="n">Dual</span> <span class="c1"># for self-defined functions use</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">autolik</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">z</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span> <span class="c1"># self-defined function</span>
+<span class="gp">... </span>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">Dual</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">Dual</span><span class="p">):</span> <span class="c1"># autolik.Dual computation</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">exp</span><span class="p">()</span>
+<span class="gp">... </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">z_grad</span> <span class="o">=</span> <span class="n">autolik</span><span class="o">.</span><span class="n">grad</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="c1"># gradient function</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">z</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">y</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vX</span><span class="p">,</span><span class="n">vY</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Z_grad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">z_grad</span><span class="p">([</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">vx</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">vy</span><span class="p">])</span> <span class="c1"># gradient vectors</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">Z</span><span class="p">,</span><span class="n">levels</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">jet</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">vX</span><span class="p">,</span><span class="n">vY</span><span class="p">,</span><span class="n">Z_grad</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">Z_grad</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/contourf_x_exp_x2_y2.png" src="_images/contourf_x_exp_x2_y2.png" />
+</figure>
+<p>Example (built in log-likelihood funtion and its gradient):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">autolik</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">loglik_normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">sigma</span><span class="p">):</span> <span class="c1"># prepare the logliklihood function</span>
+<span class="gp">... </span>   <span class="k">return</span> <span class="n">autolik</span><span class="o">.</span><span class="n">ll</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">autolik</span><span class="o">.</span><span class="n">grad</span><span class="p">(</span><span class="n">loglik_normal</span><span class="p">)</span> <span class="c1"># generate the gradient for the logliklihood function</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Mu</span><span class="p">,</span><span class="n">Sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span><span class="n">sig</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">loglik</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">loglik_normal</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">mu</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">sig</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">loglik_grad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">g</span><span class="p">([</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">mu</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">sig</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">Mu</span><span class="p">,</span><span class="n">Sigma</span><span class="p">,</span><span class="n">loglik</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">jet</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span> <span class="c1"># plot the contour of log-likelihood function</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">Mu</span><span class="p">,</span><span class="n">Sigma</span><span class="p">,</span><span class="n">loglik_grad</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">loglik_grad</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># plot the gradient vectors of log-likelihood function</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<figure class="align-center">
+<img alt="_images/contourf_loglik_normal.png" src="_images/contourf_loglik_normal.png" />
+</figure>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Langyan Zang.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
