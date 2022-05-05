@@ -66,6 +66,14 @@ Autolik aims at providing interface of automatic differentiation for likelihood 
 
 Autolik supports the basic operators (e.g. `+`, `-`, `*`, `**`, `/` ...) and special functions (e.g. `sin`, `cos`, `exp`, `log`, `gamma`, `beta` ...)
 
+## Installation
+
+Simply run the following code in terminal or prompt:
+
+```shell
+pip install autolik
+```
+
 ## Author
 
 Autolik is written by Langyan Zang. The package is currently in the very beginning stage, any kind of contribution is welcome. Autolik is currently developed by Lanyan solely, the understanding of the slow development would be appreciated. For advices, please do not hesitate to write an email [<langyan.zang@uzh.ch>](langyan.zang@uzh.ch) and instruct me ^.^.
