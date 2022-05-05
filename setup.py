@@ -12,7 +12,7 @@ setup(
     keywords=['Automatic differentiation', 'gradients',
               'likelihood', 'optimization','Python', 
               'Scipy'],
-    url='',
+    url='https://github.com/7lang2yan/autolik.git',
     license='MIT',
     classifiers=['Development Status :: 4 - Beta',
                  'License :: OSI Approved :: MIT License',
