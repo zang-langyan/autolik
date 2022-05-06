@@ -1,4 +1,4 @@
-# Autolik
+# Autolik [![Documentation Status](https://readthedocs.org/projects/autolik/badge/?version=latest)](https://autolik.readthedocs.io/en/latest/?badge=latest)
 
 Autolik aims at providing interface of automatic differentiation for likelihood maximization routine. It not only supports various distributions probability density function and their log-likelihood functions, but also the gradient of log-likelihood functions. For example, Normal, Gamma, Laplace, Pareto, T, Generalized Gamma, Generalized Pareto, ,Inverse Gaussian, Inverted Gamma, Lomax, Minimax, Rayleigh, Weibull and so on. It also supports self-defined python functions and provides fast automatic differentiation api on it.
 
