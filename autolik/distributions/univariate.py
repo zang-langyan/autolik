@@ -266,7 +266,7 @@ class pdf:
         .. math::
             f(x) = \dfrac{\alpha \beta (e^{\alpha x} - 1)^{\beta-1} e^{\alpha x}}{(1+(e^{\alpha x} - 1)^{\beta})^2}, x > 0
 
-        with positive scale parameter :math:`\alpha > 0` and positive shape parameter :math:`\bata > 0`
+        with positive scale parameter :math:`\alpha > 0` and positive shape parameter :math:`\beta > 0`
         """
         assert x > 0, "'x' out of range"
         assert alpha > 0 and beta > 0, "Wrong paramterization"
