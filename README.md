@@ -76,4 +76,4 @@ pip install autolik
 
 ## Author
 
-Autolik is written by Langyan Zang. The package is currently in the very beginning stage, any kind of contribution is welcome. Autolik is currently developed by Lanyan solely, the understanding of the slow development would be appreciated. For advices, please do not hesitate to write an email [<langyan.zang@uzh.ch>](langyan.zang@uzh.ch) and instruct me ^.^.
+Autolik is written by Langyan Zang. The package is currently in the very beginning stage, any kind of contribution is welcome. Autolik is currently developed by Langyan solely, the understanding of the slow development would be appreciated. For advices, please do not hesitate to write an email [<langyan.zang@uzh.ch>](langyan.zang@uzh.ch) and instruct me ^.^.
